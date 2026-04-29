@@ -12,11 +12,17 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://home-nurse.vercel.app'),
   title: {
     default: '訪問看護転職ナビ｜看護師の転職をやさしくサポート',
     template: '%s｜訪問看護転職ナビ',
   },
   description: '訪問看護への転職を考える看護師のための情報サイト。病院からの転職・ブランク明けの復職を徹底サポートします。',
+  openGraph: {
+    type: 'website',
+    locale: 'ja_JP',
+    siteName: '訪問看護転職ナビ',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

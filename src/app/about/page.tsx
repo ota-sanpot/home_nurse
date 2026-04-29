@@ -27,7 +27,9 @@ export default function AboutPage() {
         </div>
         <div>
           <p className="font-bold mb-1">お問い合わせ</p>
-          <p>info@tech-village.co.jp</p>
+          <a href="mailto:info@tech-village.co.jp" className="hover:text-rose-primary transition-colors">
+            info@tech-village.co.jp
+          </a>
         </div>
       </div>
     </div>
