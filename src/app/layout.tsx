@@ -12,7 +12,7 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://home-nurse.vercel.app'),
+  metadataBase: new URL('https://ota-sanpot.github.io/home_nurse'),
   title: {
     default: '訪問看護転職ナビ｜看護師の転職をやさしくサポート',
     template: '%s｜訪問看護転職ナビ',

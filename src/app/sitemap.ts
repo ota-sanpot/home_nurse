@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
-const BASE_URL = 'https://home-nurse.vercel.app'
+const BASE_URL = 'https://ota-sanpot.github.io/home_nurse'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articles = await getAllArticles()
