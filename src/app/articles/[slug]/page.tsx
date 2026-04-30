@@ -3,7 +3,10 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import AffiliateCTA from '@/components/AffiliateCTA'
 import ArticleBody from '@/components/ArticleBody'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import RelatedArticles from '@/components/RelatedArticles'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
+import { getCategorySlug } from '@/lib/categories'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -35,8 +38,23 @@ export default async function ArticlePage({ params }: Props) {
 
   const { frontmatter, content } = article
 
+  const allArticles = await getAllArticles()
+  const related = allArticles
+    .filter((a) => a.category === frontmatter.category && a.slug !== slug)
+    .slice(0, 3)
+
+  const categorySlug = getCategorySlug(frontmatter.category)
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-10">
+      <Breadcrumbs
+        items={[
+          { label: 'ホーム', href: '/' },
+          { label: frontmatter.category, href: `/articles/category/${categorySlug}` },
+          { label: frontmatter.title },
+        ]}
+      />
+
       <span className="text-xs text-rose-primary font-medium border border-rose-accent rounded-full px-2 py-0.5">
         {frontmatter.category}
       </span>
@@ -58,6 +76,8 @@ export default async function ArticlePage({ params }: Props) {
         href="https://affiliate-link.example.com"
         buttonText="無料で求人を見る →"
       />
+
+      <RelatedArticles articles={related} />
     </div>
   )
 }

@@ -40,6 +40,11 @@ export async function getAllArticles(): Promise<ArticleMeta[]> {
   return articles.sort((a, b) => (a.date >= b.date ? -1 : 1))
 }
 
+export async function getArticlesByCategory(categoryName: string): Promise<ArticleMeta[]> {
+  const all = await getAllArticles()
+  return all.filter((a) => a.category === categoryName)
+}
+
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
   const filePath = path.join(articlesDir, `${slug}.mdx`)
 
