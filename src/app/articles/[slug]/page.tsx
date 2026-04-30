@@ -60,7 +60,6 @@ export default async function ArticlePage({ params }: Props) {
         {frontmatter.category}
       </span>
       <h1 className="mt-3 text-xl font-bold text-rose-text leading-snug">{frontmatter.title}</h1>
-      <p className="mt-1 text-xs text-gray-400">{frontmatter.date}</p>
 
       <div className="mt-8">
         <ArticleBody>
