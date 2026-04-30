@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import AffiliateCTA from '@/components/AffiliateCTA'
 import ArticleBody from '@/components/ArticleBody'
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -65,6 +66,7 @@ export default async function ArticlePage({ params }: Props) {
         <ArticleBody>
           <MDXRemote
             source={content}
+            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             components={{ AffiliateCTA }}
           />
         </ArticleBody>
