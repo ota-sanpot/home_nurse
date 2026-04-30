@@ -16,19 +16,13 @@ export default function AboutPage() {
         </div>
         <div>
           <p className="font-bold mb-1">運営者</p>
-          <p>大田区サンポット（OtaSanpot）</p>
-        </div>
-        <div>
-          <p className="font-bold mb-1">サイトの目的</p>
-          <p>
-            訪問看護への転職を検討している看護師の方に、正確で役立つ情報をお届けすることを目的としています。
-            当サイトはアフィリエイトプログラムを利用しており、紹介する求人サービスを通じて収益を得ることがあります。
-          </p>
+          <p>nozario</p>
         </div>
         <div>
           <p className="font-bold mb-1">お問い合わせ</p>
-          <a href="mailto:info@tech-village.co.jp" className="hover:text-rose-primary transition-colors">
-            info@tech-village.co.jp
+          <p className="mb-1">下記のInstagramよりDMください。</p>
+          <a href="https://www.instagram.com/home.ns_nozario/" target="_blank" rel="noopener noreferrer" className="hover:text-rose-primary transition-colors">
+            @home.ns_nozario
           </a>
         </div>
       </div>
