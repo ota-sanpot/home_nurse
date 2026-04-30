@@ -36,7 +36,7 @@ export default async function ArticlePage({ params }: Props) {
   const { frontmatter, content } = article
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-10">
+    <div className="max-w-4xl mx-auto px-6 py-10">
       <span className="text-xs text-rose-primary font-medium border border-rose-accent rounded-full px-2 py-0.5">
         {frontmatter.category}
       </span>

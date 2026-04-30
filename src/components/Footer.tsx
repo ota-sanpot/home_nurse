@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-rose-accent mt-16">
-      <div className="max-w-3xl mx-auto px-4 py-8 text-sm text-rose-text">
+      <div className="max-w-6xl mx-auto px-6 py-8 text-sm text-rose-text">
         <p className="mb-3 text-xs text-gray-400">
           当サイトはアフィリエイト広告を掲載しています。
         </p>
