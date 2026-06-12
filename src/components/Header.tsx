@@ -1,12 +1,16 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { CATEGORIES } from '@/lib/categories'
+import logo from './logo.png'
 
 export default function Header() {
   return (
     <header className="bg-white border-b border-rose-accent shadow-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between py-4">
-          <Link href="/" className="text-rose-primary font-bold text-lg hover:text-rose-dark transition-colors">
+          <Link href="/" className="flex items-center gap-2 text-rose-primary font-bold text-lg hover:text-rose-dark transition-colors">
+            {/* サイトロゴ（テキストが隣にあるため alt は空） */}
+            <Image src={logo} alt="" width={40} height={40} priority />
             訪問看護転職ナビ
           </Link>
           <nav className="flex gap-6 text-sm text-rose-text">
